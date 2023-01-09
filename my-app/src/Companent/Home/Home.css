@@ -14,5 +14,6 @@
     margin: auto;
     background-color: whitesmoke;
     overflow-x: auto;
-    width: 100rem;
+    max-width: 100rem;
+    min-width: 30rem;
 }

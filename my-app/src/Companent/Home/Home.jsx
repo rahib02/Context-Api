@@ -15,11 +15,24 @@ import './Home.css';
 function Home() {
   const { datas } = useContext(Context);
   const { fav, setfav } = useContext(Context);
-  const { count, setcount } = useContext(Context);
-  const favadd = (id) => {
-    const product = datas.filter(Element => Element.id == id)
-    setfav([...fav, product])
-    setcount(fav.length + 1)
+  const { setcount } = useContext(Context);
+  const favadd = (ids) => {
+    let w = 0;
+    fav.map((x) => (
+      x.map((y) => {
+        if (y.id === ids) {
+          w += 1
+        }
+      })))
+    if (w === 0) {
+      const product = datas.filter(Element => Element.id === ids)
+      setfav([...fav, product])
+      setcount(fav.length + 1)
+    }
+    else {
+      alert("Bu esya artiq eleve olunub")
+    }
+
 
   }
   return (
