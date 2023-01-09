@@ -1,0 +1,11 @@
+.btn {
+    background: none;
+    border: none;
+
+}
+
+.star {
+    color: goldenrod;
+    width: 20px;
+    height: 20px;
+}
