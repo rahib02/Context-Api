@@ -1,5 +1,5 @@
 import React from 'react'
-import {useContext } from 'react';
+import { useContext } from 'react';
 import { Context } from '../../Context/Favoriteproduct';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -13,20 +13,20 @@ import './Home.css';
 
 
 function Home() {
-    const { datas} = useContext(Context);
-    const { fav,setfav} = useContext(Context);
-    const { count,setcount} = useContext(Context);
-    const favadd=(id)=>{
-        const product=datas.filter(Element=>Element.id==id)
-        setfav([...fav,product])
-        setcount(fav.length+1)
-        
-    }
+  const { datas } = useContext(Context);
+  const { fav, setfav } = useContext(Context);
+  const { count, setcount } = useContext(Context);
+  const favadd = (id) => {
+    const product = datas.filter(Element => Element.id == id)
+    setfav([...fav, product])
+    setcount(fav.length + 1)
+
+  }
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+    <TableContainer component={Paper} id='TableContainer'>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table" >
         <TableHead>
-          <TableRow>
+          <TableRow >
             <TableCell>Name</TableCell>
             <TableCell align='right'>Price</TableCell>
             <TableCell align='right'>Quantity</TableCell>
@@ -41,7 +41,7 @@ function Home() {
               <TableCell>{row.name}</TableCell>
               <TableCell align='right'>{row.unitPrice}</TableCell>
               <TableCell align='right'>{row.quantityPerUnit}</TableCell>
-              <TableCell align='right'><button onClick={()=>favadd(row.id)} className='btn'>< AiFillStar className='star'/></button></TableCell>
+              <TableCell align='right'><button onClick={() => favadd(row.id)} className='btn'>< AiFillStar className='star' /></button></TableCell>
             </TableRow>
           ))}
         </TableBody>

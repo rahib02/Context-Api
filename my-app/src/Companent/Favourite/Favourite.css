@@ -1,0 +1,6 @@
+#TableContainer {
+    margin: auto;
+    background-color: whitesmoke;
+    overflow-x: auto;
+    width: 100rem;
+}

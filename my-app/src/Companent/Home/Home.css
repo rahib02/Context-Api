@@ -9,3 +9,10 @@
     width: 20px;
     height: 20px;
 }
+
+#TableContainer {
+    margin: auto;
+    background-color: whitesmoke;
+    overflow-x: auto;
+    width: 100rem;
+}
